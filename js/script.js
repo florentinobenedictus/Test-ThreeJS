@@ -19,10 +19,10 @@ scene.add( cube );
 // scene.add( light );
 
 // HemisphereLight
-const skyColor = 0x0000FF;  // light blue
-const groundColor = 0xff0000;  // brownish orange
-const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
-scene.add( light );
+// const skyColor = 0x0000FF;  // light blue
+// const groundColor = 0xff0000;  // brownish orange
+// const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
+// scene.add( light );
 
 // DirectionalLight
 // const color = 0xFFFFFF;
@@ -37,7 +37,7 @@ scene.add( light );
 // const color = 0xFFFFFF;
 // const intensity = 1;
 // const light = new THREE.PointLight(color, intensity);
-// light.position.set(0, 1, 0);
+// light.position.set(0, 5, 0);
 // scene.add( light );
 
 // SpotLight
