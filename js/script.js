@@ -9,27 +9,20 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshPhongMaterial( { color: 0x00ff00 } );
+const material = new THREE.MeshPhongMaterial( { color: 0xffffff } );
 const cube = new THREE.Mesh( geometry, material );
 cube.position.set(1, 1, 1);
 scene.add( cube );
-
-
-const light = new THREE.DirectionalLight(0xF0F0F0, 1);
-light.position.set(0, -5, 0);
-light.target.position.set(-5, 0, 0);
-scene.add( light );
-scene.add(light.target);
 
 // Ambient Light
 // const light = new THREE.AmbientLight(0xFFFFFF, 1);
 // scene.add( light );
 
 // HemisphereLight
-// const skyColor = 0xB1E1FF;  // light blue
-// const groundColor = 0xB97A20;  // brownish orange
-// const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
-// scene.add( light );
+const skyColor = 0x0000FF;  // light blue
+const groundColor = 0xff0000;  // brownish orange
+const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
+scene.add( light );
 
 // DirectionalLight
 // const color = 0xFFFFFF;
