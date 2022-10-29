@@ -34,10 +34,10 @@ scene.add( sphere );
 // scene.add( light );
 
 // HemisphereLight
-const skyColor = 0x0000FF;  // blue
-const groundColor = 0xFF0000;  // red
-const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
-scene.add( light );
+// const skyColor = 0x0000FF;  // blue
+// const groundColor = 0xFF0000;  // red
+// const light = new THREE.HemisphereLight(skyColor, groundColor, 1);
+// scene.add( light );
 
 // DirectionalLight
 // const color = 0xFF0080;
@@ -56,13 +56,11 @@ scene.add( light );
 // scene.add( light );
 
 // SpotLight
-// const color = 0x000000;
-// const intensity = 1;
-// const light = new THREE.SpotLight(color, intensity,0 , 1);
-// light.position.set(0, 5, 0);
-// //light.position.target.set(0, -5, 0);
-// scene.add(light);
-// scene.add(light.target);
+const light = new THREE.SpotLight(0xFFFFFF, 1, 0, 1);
+light.position.set(0, 5, 0);
+light.target.position.set(0, -5, 0);
+scene.add(light);
+scene.add(light.target);
 
 // Background Color
 // renderer.setClearColor ( 0xffffff )
